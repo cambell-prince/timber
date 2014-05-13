@@ -415,6 +415,10 @@ class TimberPost extends TimberCore {
 		}
 		$post->slug = $post->post_name;
 		$post->status = $post->post_status;
+		$post->date = $post->post_date;
+		$post->modified = $post->post_modified;
+		$post->date_gmt = $post->post_date_gmt;
+		$post->modified_gmt = $post->post_date_modified_gmt;
 		$customs = $this->get_post_custom($post->ID);
 		$post = (object) array_merge((array) $post, (array) $customs);
 		return $post;
